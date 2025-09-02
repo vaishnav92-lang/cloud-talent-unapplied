@@ -80,7 +80,7 @@ const Index = () => {
             </div>
             
             <p className="text-muted-foreground font-mono text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-wide leading-relaxed">
-              access talent that won't apply
+              Access talent that won't apply
             </p>
           </div>
 
