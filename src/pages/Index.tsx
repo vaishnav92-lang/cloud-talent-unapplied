@@ -77,12 +77,14 @@ const Index = () => {
       
       {/* Main content */}
       <div className="relative z-10 flex items-center justify-center min-h-screen px-6">
-        <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-light tracking-tight text-foreground leading-tight">
-            <span className="block opacity-90">clout</span>
-            <span className="block mt-2 text-muted-foreground font-mono text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-              access talent that won't apply
-            </span>
+        <div className="text-center max-w-5xl mx-auto">
+          <h1 className="font-sans font-light tracking-tight text-foreground leading-tight">
+            <span className="block opacity-90 text-6xl sm:text-7xl md:text-8xl lg:text-9xl">clout</span>
+            <div className="mt-8 mb-12">
+              <span className="block text-muted-foreground font-mono text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+                access talent that won't apply
+              </span>
+            </div>
           </h1>
           
           {/* Terminal-style accent line with blinking cursor */}
@@ -104,9 +106,33 @@ const Index = () => {
             </span>
           </div>
           
+          {/* Main action buttons */}
+          <div className="mt-12 flex flex-col sm:flex-row gap-4 items-center justify-center">
+            <button className="group relative px-8 py-4 bg-accent text-accent-foreground font-medium rounded-md transition-all duration-300 hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/20 min-w-[200px]">
+              <span className="relative z-10 text-lg font-mono tracking-wide">Hire Talent</span>
+              <div className="absolute inset-0 rounded-md bg-gradient-to-r from-accent to-accent opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+            </button>
+            
+            <button className="group relative px-8 py-4 bg-secondary text-secondary-foreground font-medium rounded-md border border-border transition-all duration-300 hover:bg-secondary/80 hover:border-accent/50 min-w-[200px]">
+              <span className="relative z-10 text-lg font-mono tracking-wide">Join Network</span>
+              <div className="absolute inset-0 rounded-md bg-accent opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+            </button>
+          </div>
+          
+          {/* Secondary navigation */}
+          <div className="mt-8 flex items-center justify-center space-x-6">
+            <button className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm tracking-wide uppercase opacity-70 hover:opacity-100">
+              Team
+            </button>
+            <div className="w-px h-4 bg-border opacity-50" />
+            <button className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm tracking-wide uppercase opacity-70 hover:opacity-100">
+              How it Works
+            </button>
+          </div>
+          
           {/* Optional subtitle for context */}
-          <p className="mt-4 text-sm sm:text-base text-muted-foreground font-mono opacity-70 tracking-wider uppercase">
-            Incentivized talent networks
+          <p className="mt-6 text-sm text-muted-foreground font-mono opacity-60 tracking-wider uppercase">
+            Incentivized talent networks for early-stage startups
           </p>
         </div>
       </div>
