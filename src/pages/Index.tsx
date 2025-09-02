@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   return (
@@ -120,19 +121,19 @@ const Index = () => {
           </div>
           
           {/* Primary navigation - much more prominent */}
-          <div className="mt-12 flex flex-col sm:flex-row gap-4 items-center justify-center">
-            <button className="group relative px-6 py-3 bg-transparent border border-accent text-accent font-medium rounded-md transition-all duration-300 hover:bg-accent hover:text-accent-foreground hover:shadow-lg hover:shadow-accent/20 min-w-[160px]">
-              <span className="relative z-10 text-base font-mono tracking-wide">Team</span>
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 items-center justify-center">
+            <Link to="/team" className="group relative px-8 py-4 bg-transparent border-2 border-accent text-accent font-medium rounded-md transition-all duration-300 hover:bg-accent hover:text-accent-foreground hover:shadow-xl hover:shadow-accent/25 min-w-[180px] transform hover:scale-105 inline-flex items-center justify-center">
+              <span className="relative z-10 text-lg font-mono tracking-wide">Team</span>
               <div className="absolute inset-0 rounded-md bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </button>
+            </Link>
             
-            <button className="group relative px-6 py-3 bg-transparent border border-muted text-muted-foreground font-medium rounded-md transition-all duration-300 hover:bg-secondary hover:text-foreground hover:border-accent/50 min-w-[160px]">
-              <span className="relative z-10 text-base font-mono tracking-wide">Pricing</span>
-            </button>
+            <Link to="/pricing" className="group relative px-8 py-4 bg-transparent border border-muted text-muted-foreground font-medium rounded-md transition-all duration-300 hover:bg-secondary hover:text-foreground hover:border-accent/50 hover:shadow-lg min-w-[180px] transform hover:scale-105 inline-flex items-center justify-center">
+              <span className="relative z-10 text-lg font-mono tracking-wide">Pricing</span>
+            </Link>
             
-            <button className="group relative px-6 py-3 bg-transparent border border-muted text-muted-foreground font-medium rounded-md transition-all duration-300 hover:bg-secondary hover:text-foreground hover:border-accent/50 min-w-[160px]">
-              <span className="relative z-10 text-base font-mono tracking-wide">Testimonials</span>
-            </button>
+            <Link to="/testimonials" className="group relative px-8 py-4 bg-transparent border border-muted text-muted-foreground font-medium rounded-md transition-all duration-300 hover:bg-secondary hover:text-foreground hover:border-accent/50 hover:shadow-lg min-w-[180px] transform hover:scale-105 inline-flex items-center justify-center">
+              <span className="relative z-10 text-lg font-mono tracking-wide">Testimonials</span>
+            </Link>
           </div>
           
           {/* Optional subtitle for context */}
