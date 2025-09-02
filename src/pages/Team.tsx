@@ -82,7 +82,7 @@ const Team = () => {
                 Advisor
               </p>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                [Bio for Jordan - background, expertise, how they're helping Clout]
+                Jordan is on garden leave after building the systematic buy-side alpha capture business at Two Sigma Investments. He currently blogs at FUTURE TOKENS on Substack. Jordan received a BS/BA degree in Economics from Wharton School at University of Pennsylvania. As advisor to Metaculus, he focuses on commercialization and monetization.
               </p>
             </div>
 
