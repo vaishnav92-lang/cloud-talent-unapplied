@@ -58,14 +58,7 @@ const Index = () => {
           <Link to="/blog" className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm tracking-wide">Blog</Link>
           
           {/* CTA in nav */}
-          <a 
-            href="https://cloutcareers.typeform.com/hiring" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="px-4 py-2 bg-accent text-accent-foreground font-medium rounded-md transition-all duration-300 hover:bg-accent/90 hover:shadow-lg font-mono text-sm tracking-wide"
-          >
-            Get Started
-          </a>
+         
         </div>
       </nav>
       
