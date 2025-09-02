@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Team = () => {
   return (
@@ -59,118 +58,38 @@ const Team = () => {
             </p>
           </div>
 
-          {/* Team Grid - Equitable Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* Team Members - Just the two actual people */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             
-            {/* CEO */}
-            <div className="bg-card border border-border rounded-lg p-6 text-center hover:border-accent/30 transition-colors">
-              <div className="w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/10 rounded-lg border border-accent/30 flex items-center justify-center mx-auto mb-4">
-                <span className="text-accent font-mono text-xs opacity-60">CEO Photo</span>
+            {/* Vaishnav Sunil - Founder and CEO */}
+            <div className="bg-card border border-border rounded-lg p-8 text-center hover:border-accent/30 transition-colors">
+              <div className="w-32 h-32 bg-gradient-to-br from-accent/20 to-accent/10 rounded-lg border border-accent/30 flex items-center justify-center mx-auto mb-6">
+                <span className="text-accent font-mono text-sm opacity-60">Photo</span>
               </div>
-              <h3 className="text-xl font-medium text-foreground mb-1">
-                [CEO Name]
+              <h3 className="text-2xl font-medium text-foreground mb-2">
+                Vaishnav Sunil
               </h3>
-              <p className="text-accent font-mono text-sm mb-3 tracking-wide">
-                Chief Executive Officer
+              <p className="text-accent font-mono text-sm mb-4 tracking-wide">
+                Founder and CEO
               </p>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                [CEO bio - background, vision, why building Clout]
+                [Bio for Vaishnav - background, experience, vision for Clout, why building this platform]
               </p>
             </div>
 
-            {/* Team Member/Advisor 1 */}
-            <div className="bg-card border border-border rounded-lg p-6 text-center hover:border-accent/30 transition-colors">
-              <div className="w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/10 rounded-lg border border-accent/30 flex items-center justify-center mx-auto mb-4">
-                <span className="text-accent font-mono text-xs opacity-60">Photo</span>
+            {/* Jordan Rubin - Advisor */}
+            <div className="bg-card border border-border rounded-lg p-8 text-center hover:border-accent/30 transition-colors">
+              <div className="w-32 h-32 bg-gradient-to-br from-accent/20 to-accent/10 rounded-lg border border-accent/30 flex items-center justify-center mx-auto mb-6">
+                <span className="text-accent font-mono text-sm opacity-60">Photo</span>
               </div>
-              <h3 className="text-xl font-medium text-foreground mb-1">
-                [Team Member Name]
+              <h3 className="text-2xl font-medium text-foreground mb-2">
+                Jordan Rubin
               </h3>
-              <p className="text-accent font-mono text-sm mb-3 tracking-wide">
-                [Title/Role]
+              <p className="text-accent font-mono text-sm mb-4 tracking-wide">
+                Advisor
               </p>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                [Brief background and expertise]
-              </p>
-            </div>
-
-            {/* Team Member/Advisor 2 */}
-            <div className="bg-card border border-border rounded-lg p-6 text-center hover:border-accent/30 transition-colors">
-              <div className="w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/10 rounded-lg border border-accent/30 flex items-center justify-center mx-auto mb-4">
-                <span className="text-accent font-mono text-xs opacity-60">Photo</span>
-              </div>
-              <h3 className="text-xl font-medium text-foreground mb-1">
-                [Team Member Name]
-              </h3>
-              <p className="text-accent font-mono text-sm mb-3 tracking-wide">
-                [Title/Role]
-              </p>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                [Brief background and expertise]
-              </p>
-            </div>
-
-            {/* Team Member/Advisor 3 */}
-            <div className="bg-card border border-border rounded-lg p-6 text-center hover:border-accent/30 transition-colors">
-              <div className="w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/10 rounded-lg border border-accent/30 flex items-center justify-center mx-auto mb-4">
-                <span className="text-accent font-mono text-xs opacity-60">Photo</span>
-              </div>
-              <h3 className="text-xl font-medium text-foreground mb-1">
-                [Team Member Name]
-              </h3>
-              <p className="text-accent font-mono text-sm mb-3 tracking-wide">
-                [Title/Role]
-              </p>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                [Brief background and expertise]
-              </p>
-            </div>
-
-            {/* Team Member/Advisor 4 */}
-            <div className="bg-card border border-border rounded-lg p-6 text-center hover:border-accent/30 transition-colors">
-              <div className="w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/10 rounded-lg border border-accent/30 flex items-center justify-center mx-auto mb-4">
-                <span className="text-accent font-mono text-xs opacity-60">Photo</span>
-              </div>
-              <h3 className="text-xl font-medium text-foreground mb-1">
-                [Team Member Name]
-              </h3>
-              <p className="text-accent font-mono text-sm mb-3 tracking-wide">
-                [Title/Role]
-              </p>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                [Brief background and expertise]
-              </p>
-            </div>
-
-            {/* Team Member/Advisor 5 */}
-            <div className="bg-card border border-border rounded-lg p-6 text-center hover:border-accent/30 transition-colors">
-              <div className="w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/10 rounded-lg border border-accent/30 flex items-center justify-center mx-auto mb-4">
-                <span className="text-accent font-mono text-xs opacity-60">Photo</span>
-              </div>
-              <h3 className="text-xl font-medium text-foreground mb-1">
-                [Team Member Name]
-              </h3>
-              <p className="text-accent font-mono text-sm mb-3 tracking-wide">
-                [Title/Role]
-              </p>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                [Brief background and expertise]
-              </p>
-            </div>
-
-            {/* Team Member/Advisor 6 */}
-            <div className="bg-card border border-border rounded-lg p-6 text-center hover:border-accent/30 transition-colors">
-              <div className="w-24 h-24 bg-gradient-to-br from-accent/20 to-accent/10 rounded-lg border border-accent/30 flex items-center justify-center mx-auto mb-4">
-                <span className="text-accent font-mono text-xs opacity-60">Photo</span>
-              </div>
-              <h3 className="text-xl font-medium text-foreground mb-1">
-                [Team Member Name]
-              </h3>
-              <p className="text-accent font-mono text-sm mb-3 tracking-wide">
-                [Title/Role]
-              </p>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                [Brief background and expertise]
+                [Bio for Jordan - background, expertise, how they're helping Clout]
               </p>
             </div>
 
