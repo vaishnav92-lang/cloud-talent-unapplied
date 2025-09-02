@@ -48,7 +48,7 @@ const Team = () => {
             </p>
           </div>
 
-          {/* Team Members - Just the two actual people */}
+          {/* Team Members */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             
             {/* Vaishnav Sunil - Founder and CEO */}
@@ -69,9 +69,12 @@ const Team = () => {
 
             {/* Jordan Rubin - Advisor */}
             <div className="bg-card border border-border rounded-lg p-8 text-center hover:border-accent/30 transition-colors">
-              <div className="w-32 h-32 bg-gradient-to-br from-accent/20 to-accent/10 rounded-lg border border-accent/30 flex items-center justify-center mx-auto mb-6">
-                <span className="text-accent font-mono text-sm opacity-60">Photo</span>
-              </div>
+              <img
+                src="/JR Headshot.jpg"   /* file lives in /public */
+                alt="Jordan Rubin headshot"
+                className="w-32 h-32 object-cover rounded-lg border border-accent/30 mx-auto mb-6"
+                loading="lazy"
+              />
               <h3 className="text-2xl font-medium text-foreground mb-2">
                 Jordan Rubin
               </h3>
