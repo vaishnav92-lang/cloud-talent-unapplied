@@ -54,7 +54,7 @@ const Index = () => {
         <CloutLogo />
         <div className="flex items-center space-x-8">
           <Link to="/team" className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm tracking-wide">Team</Link>
-          <Link to="/pricing" className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm tracking-wide">Pricing</Link>
+          <Link to="/Our Model" className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm tracking-wide">Pricing</Link>
           <Link to="/blog" className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm tracking-wide">Blog</Link>
           
           {/* CTA in nav */}
