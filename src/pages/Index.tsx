@@ -107,26 +107,31 @@ const Index = () => {
           </div>
           
           {/* Main action buttons */}
-          <div className="mt-12 flex flex-col sm:flex-row gap-4 items-center justify-center">
-            <button className="group relative px-8 py-4 bg-accent text-accent-foreground font-medium rounded-md transition-all duration-300 hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/20 min-w-[200px]">
-              <span className="relative z-10 text-lg font-mono tracking-wide">Hire Talent</span>
+          <div className="mt-16 flex flex-col sm:flex-row gap-4 items-center justify-center">
+            <button className="group relative px-10 py-5 bg-accent text-accent-foreground font-medium rounded-md transition-all duration-300 hover:bg-accent/90 hover:shadow-xl hover:shadow-accent/25 min-w-[220px] transform hover:scale-105">
+              <span className="relative z-10 text-xl font-mono tracking-wide">Hire Talent</span>
               <div className="absolute inset-0 rounded-md bg-gradient-to-r from-accent to-accent opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
             </button>
             
-            <button className="group relative px-8 py-4 bg-secondary text-secondary-foreground font-medium rounded-md border border-border transition-all duration-300 hover:bg-secondary/80 hover:border-accent/50 min-w-[200px]">
-              <span className="relative z-10 text-lg font-mono tracking-wide">Join Network</span>
+            <button className="group relative px-10 py-5 bg-secondary text-secondary-foreground font-medium rounded-md border border-border transition-all duration-300 hover:bg-secondary/80 hover:border-accent/50 hover:shadow-lg min-w-[220px] transform hover:scale-105">
+              <span className="relative z-10 text-xl font-mono tracking-wide">Join Network</span>
               <div className="absolute inset-0 rounded-md bg-accent opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
             </button>
           </div>
           
-          {/* Secondary navigation */}
-          <div className="mt-8 flex items-center justify-center space-x-6">
-            <button className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm tracking-wide uppercase opacity-70 hover:opacity-100">
-              Team
+          {/* Primary navigation - much more prominent */}
+          <div className="mt-12 flex flex-col sm:flex-row gap-4 items-center justify-center">
+            <button className="group relative px-6 py-3 bg-transparent border border-accent text-accent font-medium rounded-md transition-all duration-300 hover:bg-accent hover:text-accent-foreground hover:shadow-lg hover:shadow-accent/20 min-w-[160px]">
+              <span className="relative z-10 text-base font-mono tracking-wide">Team</span>
+              <div className="absolute inset-0 rounded-md bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </button>
-            <div className="w-px h-4 bg-border opacity-50" />
-            <button className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm tracking-wide uppercase opacity-70 hover:opacity-100">
-              How it Works
+            
+            <button className="group relative px-6 py-3 bg-transparent border border-muted text-muted-foreground font-medium rounded-md transition-all duration-300 hover:bg-secondary hover:text-foreground hover:border-accent/50 min-w-[160px]">
+              <span className="relative z-10 text-base font-mono tracking-wide">Pricing</span>
+            </button>
+            
+            <button className="group relative px-6 py-3 bg-transparent border border-muted text-muted-foreground font-medium rounded-md transition-all duration-300 hover:bg-secondary hover:text-foreground hover:border-accent/50 min-w-[160px]">
+              <span className="relative z-10 text-base font-mono tracking-wide">Testimonials</span>
             </button>
           </div>
           
