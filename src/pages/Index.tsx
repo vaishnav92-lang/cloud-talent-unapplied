@@ -156,18 +156,6 @@ const Index = () => {
             </a>
           </div>
 
-          {/* Network status indicator - visual anchor */}
-          <div className="flex items-center justify-center space-x-3 opacity-60">
-            <div className="flex items-center space-x-1">
-              <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              <span className="text-xs font-mono text-muted-foreground tracking-wider uppercase">Live</span>
-            </div>
-            <div className="w-px h-4 bg-border" />
-            <span className="text-xs font-mono text-muted-foreground tracking-wider uppercase">1,000+ Network Members</span>
-            <div className="w-px h-4 bg-border" />
-            <span className="text-xs font-mono text-muted-foreground tracking-wider uppercase">50+ Successful Placements</span>
-          </div>
-
         </div>
       </div>
       
