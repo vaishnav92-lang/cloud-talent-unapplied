@@ -1,14 +1,42 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+const CloutLogo = () => (
+  <svg width="120" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="hsl(142, 76%, 36%)" stopOpacity="1"/>
+        <stop offset="100%" stopColor="hsl(142, 70%, 45%)" stopOpacity="0.8"/>
+      </linearGradient>
+    </defs>
+    
+    <g transform="translate(8, 12)">
+      <circle cx="8" cy="8" r="2" fill="url(#logoGradient)"/>
+      <circle cx="3" cy="3" r="1" fill="hsl(142, 76%, 36%)" opacity="0.8"/>
+      <circle cx="13" cy="4" r="1" fill="hsl(142, 76%, 36%)" opacity="0.6"/>
+      <circle cx="4" cy="13" r="1" fill="hsl(142, 76%, 36%)" opacity="0.7"/>
+      <circle cx="13" cy="13" r="1" fill="hsl(142, 76%, 36%)" opacity="0.5"/>
+      
+      <line x1="8" y1="8" x2="3" y2="3" stroke="hsl(142, 76%, 36%)" strokeWidth="0.5" opacity="0.4"/>
+      <line x1="8" y1="8" x2="13" y2="4" stroke="hsl(142, 76%, 36%)" strokeWidth="0.5" opacity="0.3"/>
+      <line x1="8" y1="8" x2="4" y2="13" stroke="hsl(142, 76%, 36%)" strokeWidth="0.5" opacity="0.4"/>
+      <line x1="8" y1="8" x2="13" y2="13" stroke="hsl(142, 76%, 36%)" strokeWidth="0.5" opacity="0.2"/>
+    </g>
+    
+    <text x="35" y="25" fontFamily="'Inter', system-ui, sans-serif" fontSize="16" fontWeight="300" fill="hsl(210, 20%, 98%)" letterSpacing="-0.02em">
+      Clout
+    </text>
+  </svg>
+);
+
 const Index = () => {
   return (
     <main className="min-h-screen bg-background relative overflow-hidden">
-      {/* Subtle gradient overlay for depth */}
+      {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-card opacity-90" />
       
-      {/* Animated grid pattern background */}
-      <div className="absolute inset-0 opacity-10">
+      {/* Grid pattern background */}
+      <div className="absolute inset-0 opacity-5">
         <div 
           className="h-full w-full"
           style={{
@@ -20,176 +48,147 @@ const Index = () => {
           }}
         />
       </div>
-      
-      {/* Abstract network nodes - floating elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        {/* Top left cluster */}
-        <div className="absolute top-20 left-20 w-2 h-2 bg-accent rounded-full opacity-40 animate-pulse" style={{ animationDelay: '0s' }} />
-        <div className="absolute top-32 left-32 w-1 h-1 bg-accent rounded-full opacity-30 animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-28 left-48 w-1.5 h-1.5 bg-accent rounded-full opacity-35 animate-pulse" style={{ animationDelay: '2s' }} />
-        
-        {/* Top right cluster */}
-        <div className="absolute top-24 right-24 w-1.5 h-1.5 bg-accent rounded-full opacity-40 animate-pulse" style={{ animationDelay: '0.5s' }} />
-        <div className="absolute top-40 right-40 w-1 h-1 bg-accent rounded-full opacity-30 animate-pulse" style={{ animationDelay: '1.5s' }} />
-        
-        {/* Bottom clusters */}
-        <div className="absolute bottom-32 left-16 w-1 h-1 bg-accent rounded-full opacity-25 animate-pulse" style={{ animationDelay: '2.5s' }} />
-        <div className="absolute bottom-24 right-32 w-2 h-2 bg-accent rounded-full opacity-35 animate-pulse" style={{ animationDelay: '3s' }} />
-        
-        {/* Connection lines between nodes */}
-        <svg className="absolute inset-0 w-full h-full opacity-20">
-          <defs>
-            <linearGradient id="connectionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="hsl(142 76% 36%)" stopOpacity="0.4" />
-              <stop offset="100%" stopColor="hsl(142 76% 36%)" stopOpacity="0.1" />
-            </linearGradient>
-          </defs>
-          <line x1="5%" y1="15%" x2="20%" y2="25%" stroke="url(#connectionGradient)" strokeWidth="1" />
-          <line x1="20%" y1="25%" x2="35%" y2="20%" stroke="url(#connectionGradient)" strokeWidth="1" />
-          <line x1="80%" y1="20%" x2="85%" y2="35%" stroke="url(#connectionGradient)" strokeWidth="1" />
-          <line x1="15%" y1="80%" x2="80%" y2="85%" stroke="url(#connectionGradient)" strokeWidth="1" opacity="0.3" />
-        </svg>
-      </div>
-      
-      {/* Data stream visualization - side panels */}
-      <div className="absolute left-8 top-1/2 -translate-y-1/2 w-16 h-64 opacity-20">
-        <div className="space-y-2">
-          {Array.from({ length: 8 }).map((_, i) => (
-            <div key={i} className="flex space-x-1">
-              <div className="w-1 h-1 bg-accent rounded-full animate-pulse" style={{ animationDelay: `${i * 0.2}s` }} />
-              <div className="w-2 h-1 bg-muted rounded-sm" />
-              <div className="w-3 h-1 bg-muted rounded-sm" />
-            </div>
-          ))}
+
+      {/* Navigation */}
+      <nav className="relative z-20 flex items-center justify-between p-6">
+        <CloutLogo />
+        <div className="flex items-center space-x-8">
+          <Link to="/team" className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm tracking-wide">Team</Link>
+          <Link to="/pricing" className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm tracking-wide">Pricing</Link>
+          <Link to="/blog" className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm tracking-wide">Blog</Link>
+          
+          {/* CTA in nav */}
+          <a 
+            href="https://cloutcareers.typeform.com/hiring" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="px-4 py-2 bg-accent text-accent-foreground font-medium rounded-md transition-all duration-300 hover:bg-accent/90 hover:shadow-lg font-mono text-sm tracking-wide"
+          >
+            Get Started
+          </a>
         </div>
-      </div>
+      </nav>
       
-      <div className="absolute right-8 top-1/2 -translate-y-1/2 w-16 h-64 opacity-20">
-        <div className="space-y-2">
-          {Array.from({ length: 8 }).map((_, i) => (
-            <div key={i} className="flex space-x-1 justify-end">
-              <div className="w-3 h-1 bg-muted rounded-sm" />
-              <div className="w-2 h-1 bg-muted rounded-sm" />
-              <div className="w-1 h-1 bg-accent rounded-full animate-pulse" style={{ animationDelay: `${i * 0.3}s` }} />
+      {/* Hero section with better visual hierarchy */}
+      <div className="relative z-10 flex items-center justify-center min-h-[80vh] px-6">
+        <div className="text-center max-w-6xl mx-auto">
+          
+          {/* Main heading with better spacing */}
+          <div className="mb-16">
+            <h1 className="font-sans font-light tracking-tight text-foreground leading-tight mb-6">
+              <span className="block opacity-95 text-6xl sm:text-7xl md:text-8xl lg:text-9xl">Clout</span>
+            </h1>
+            
+            {/* Horizontal rule for visual break */}
+            <div className="flex items-center justify-center mb-6">
+              <div className="w-20 h-px bg-accent opacity-60" />
+              <div className="w-2 h-2 bg-accent rounded-full mx-4 opacity-60 animate-pulse" />
+              <div className="w-20 h-px bg-accent opacity-60" />
             </div>
-          ))}
-        </div>
-      </div>
-      
-      {/* Main content */}
-      <div className="relative z-10 flex items-center justify-center min-h-screen px-6">
-        <div className="text-center max-w-5xl mx-auto">
-          <h1 className="font-sans font-light tracking-tight text-foreground leading-tight">
-            <span className="block opacity-90 text-6xl sm:text-7xl md:text-8xl lg:text-9xl">clout</span>
-            <div className="mt-8 mb-12">
-              <span className="block text-muted-foreground font-mono text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-                access talent that won't apply
-              </span>
+            
+            <p className="text-muted-foreground font-mono text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-wide leading-relaxed">
+              access talent that won't apply
+            </p>
+          </div>
+
+          {/* Key value props with icons - visual anchors */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 max-w-4xl mx-auto">
+            
+            {/* Prop 1 */}
+            <div className="bg-card/30 border border-border/50 rounded-lg p-6 backdrop-blur-sm">
+              <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                <svg className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z"/>
+                </svg>
+              </div>
+              <h3 className="font-mono text-sm tracking-wider uppercase text-accent mb-2">No Upfront Cost</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">Pay only when you hire, with performance-based fees</p>
             </div>
-          </h1>
-          
-          {/* Terminal-style accent line with blinking cursor */}
-          <div className="mt-8 mx-auto flex items-center justify-center space-x-2">
-            <div className="w-16 h-px bg-accent opacity-60" />
-            <div className="w-1 h-3 bg-accent opacity-60 animate-pulse" />
-            <div className="w-16 h-px bg-accent opacity-60" />
+
+            {/* Prop 2 */}
+            <div className="bg-card/30 border border-border/50 rounded-lg p-6 backdrop-blur-sm">
+              <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                </svg>
+              </div>
+              <h3 className="font-mono text-sm tracking-wider uppercase text-accent mb-2">Verified Networks</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">Access talent through trusted professional referrals</p>
+            </div>
+
+            {/* Prop 3 */}
+            <div className="bg-card/30 border border-border/50 rounded-lg p-6 backdrop-blur-sm">
+              <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <h3 className="font-mono text-sm tracking-wider uppercase text-accent mb-2">Quality Guaranteed</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">Karma-based system ensures high-quality introductions</p>
+            </div>
+
           </div>
-          
-          {/* Network strength indicator */}
-          <div className="mt-6 flex items-center justify-center space-x-1 opacity-50">
-            <div className="w-1 h-2 bg-accent rounded-sm" />
-            <div className="w-1 h-3 bg-accent rounded-sm" />
-            <div className="w-1 h-4 bg-accent rounded-sm" />
-            <div className="w-1 h-3 bg-accent rounded-sm" />
-            <div className="w-1 h-2 bg-accent rounded-sm" />
-            <span className="ml-3 text-xs font-mono text-muted-foreground tracking-wider uppercase">
-              Network Active
-            </span>
+
+          {/* Strong visual separator */}
+          <div className="mb-12">
+            <div className="w-full h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
           </div>
-          
-          {/* Main action buttons */}
-          <div className="mt-16 flex flex-col sm:flex-row gap-4 items-center justify-center">
+
+          {/* Primary action buttons - more prominent CTA */}
+          <div className="flex flex-col sm:flex-row gap-6 items-center justify-center mb-8">
             <a 
               href="https://cloutcareers.typeform.com/hiring" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="group relative px-10 py-5 bg-accent text-accent-foreground font-medium rounded-md transition-all duration-300 hover:bg-accent/90 hover:shadow-xl hover:shadow-accent/25 min-w-[220px] transform hover:scale-105 inline-flex items-center justify-center"
+              className="group relative px-12 py-6 bg-accent text-accent-foreground font-medium rounded-lg transition-all duration-300 hover:bg-accent/90 hover:shadow-2xl hover:shadow-accent/30 min-w-[240px] transform hover:scale-105 text-center"
             >
               <span className="relative z-10 text-xl font-mono tracking-wide">Hire Talent</span>
-              <div className="absolute inset-0 rounded-md bg-gradient-to-r from-accent to-accent opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-accent to-accent opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
             </a>
             
             <a 
               href="https://cloutcareers.typeform.com/apply" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="group relative px-10 py-5 bg-secondary text-secondary-foreground font-medium rounded-md border border-border transition-all duration-300 hover:bg-secondary/80 hover:border-accent/50 hover:shadow-lg min-w-[220px] transform hover:scale-105 inline-flex items-center justify-center"
+              className="group relative px-12 py-6 bg-transparent border-2 border-accent text-accent font-medium rounded-lg transition-all duration-300 hover:bg-accent hover:text-accent-foreground hover:shadow-lg min-w-[240px] transform hover:scale-105 text-center"
             >
               <span className="relative z-10 text-xl font-mono tracking-wide">Join Network</span>
-              <div className="absolute inset-0 rounded-md bg-accent opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
             </a>
           </div>
-          
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 items-center justify-center">
-            <Link to="/team" className="group relative px-8 py-4 bg-transparent border-2 border-accent text-accent font-medium rounded-md transition-all duration-300 hover:bg-accent hover:text-accent-foreground hover:shadow-xl hover:shadow-accent/25 min-w-[180px] transform hover:scale-105 inline-flex items-center justify-center">
-              <span className="relative z-10 text-lg font-mono tracking-wide">Team</span>
-              <div className="absolute inset-0 rounded-md bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </Link>
-            
-            <Link to="/pricing" className="group relative px-8 py-4 bg-transparent border border-muted text-muted-foreground font-medium rounded-md transition-all duration-300 hover:bg-secondary hover:text-foreground hover:border-accent/50 hover:shadow-lg min-w-[180px] transform hover:scale-105 inline-flex items-center justify-center">
-              <span className="relative z-10 text-lg font-mono tracking-wide">Pricing</span>
-            </Link>
-            
-            <Link to="/blog" className="group relative px-8 py-4 bg-transparent border border-muted text-muted-foreground font-medium rounded-md transition-all duration-300 hover:bg-secondary hover:text-foreground hover:border-accent/50 hover:shadow-lg min-w-[180px] transform hover:scale-105 inline-flex items-center justify-center">
-              <span className="relative z-10 text-lg font-mono tracking-wide">Blog</span>
-            </Link>
+
+          {/* Network status indicator - visual anchor */}
+          <div className="flex items-center justify-center space-x-3 opacity-60">
+            <div className="flex items-center space-x-1">
+              <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+              <span className="text-xs font-mono text-muted-foreground tracking-wider uppercase">Live</span>
+            </div>
+            <div className="w-px h-4 bg-border" />
+            <span className="text-xs font-mono text-muted-foreground tracking-wider uppercase">1,000+ Network Members</span>
+            <div className="w-px h-4 bg-border" />
+            <span className="text-xs font-mono text-muted-foreground tracking-wider uppercase">50+ Successful Placements</span>
           </div>
-          
-          {/* Optional subtitle for context */}
-          <p className="mt-6 text-sm text-muted-foreground font-mono opacity-60 tracking-wider uppercase">
-            Professional talent acquisition platform
-          </p>
+
         </div>
       </div>
       
-      {/* Trading terminal corner brackets */}
-      <div className="absolute top-8 left-8 w-8 h-8 border-l border-t border-accent opacity-30" />
-      <div className="absolute top-8 right-8 w-8 h-8 border-r border-t border-accent opacity-30" />
-      <div className="absolute bottom-8 left-8 w-8 h-8 border-l border-b border-accent opacity-30" />
-      <div className="absolute bottom-8 right-8 w-8 h-8 border-r border-b border-accent opacity-30" />
+      {/* Corner brackets - visual anchors */}
+      <div className="absolute top-8 left-8 w-12 h-12 border-l-2 border-t-2 border-accent opacity-30" />
+      <div className="absolute top-8 right-8 w-12 h-12 border-r-2 border-t-2 border-accent opacity-30" />
+      <div className="absolute bottom-8 left-8 w-12 h-12 border-l-2 border-b-2 border-accent opacity-30" />
+      <div className="absolute bottom-8 right-8 w-12 h-12 border-r-2 border-b-2 border-accent opacity-30" />
       
-      {/* Abstract chart visualization - bottom corner */}
+      {/* Subtle data visualization in corner */}
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex items-end space-x-1 opacity-20">
-        {Array.from({ length: 12 }).map((_, i) => (
+        {Array.from({ length: 8 }).map((_, i) => (
           <div 
             key={i}
-            className="w-1 bg-accent rounded-t-sm animate-pulse"
+            className="w-1.5 bg-accent rounded-t-sm"
             style={{ 
-              height: `${Math.random() * 20 + 8}px`,
-              animationDelay: `${i * 0.1}s`,
-              animationDuration: '2s'
+              height: `${Math.random() * 16 + 8}px`,
+              animationDelay: `${i * 0.2}s`,
             }}
           />
         ))}
-      </div>
-      
-      {/* Subtle radial glow */}
-      <div className="absolute inset-0 bg-gradient-radial from-accent/5 via-transparent to-transparent pointer-events-none" />
-      
-      {/* Status indicators - top bar style */}
-      <div className="absolute top-6 left-1/2 -translate-x-1/2 flex space-x-4 opacity-30">
-        <div className="flex items-center space-x-1">
-          <div className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
-          <span className="text-xs font-mono text-muted-foreground">LIVE</span>
-        </div>
-        <div className="flex items-center space-x-1">
-          <div className="w-1.5 h-1.5 bg-green-400 rounded-full" />
-          <span className="text-xs font-mono text-muted-foreground">SYNC</span>
-        </div>
-        <div className="flex items-center space-x-1">
-          <div className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} />
-          <span className="text-xs font-mono text-muted-foreground">NET</span>
-        </div>
       </div>
     </main>
   );
