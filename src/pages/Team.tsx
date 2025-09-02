@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Team = () => {
   return (
@@ -22,13 +23,13 @@ const Team = () => {
 
       {/* Navigation */}
       <nav className="relative z-20 flex items-center justify-between p-6">
-        <a href="/" className="text-2xl font-light tracking-tight text-foreground opacity-90">
+        <Link to="/" className="text-2xl font-light tracking-tight text-foreground opacity-90 hover:opacity-100 transition-opacity">
           clout
-        </a>
+        </Link>
         <div className="flex space-x-6">
-          <a href="/" className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm">Home</a>
-          <a href="/pricing" className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm">Pricing</a>
-          <a href="/testimonials" className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm">Testimonials</a>
+          <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm">Home</Link>
+          <Link to="/pricing" className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm">Pricing</Link>
+          <Link to="/testimonials" className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm">Testimonials</Link>
         </div>
       </nav>
 
