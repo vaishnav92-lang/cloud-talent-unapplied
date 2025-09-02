@@ -109,15 +109,25 @@ const Index = () => {
           
           {/* Main action buttons */}
           <div className="mt-16 flex flex-col sm:flex-row gap-4 items-center justify-center">
-            <button className="group relative px-10 py-5 bg-accent text-accent-foreground font-medium rounded-md transition-all duration-300 hover:bg-accent/90 hover:shadow-xl hover:shadow-accent/25 min-w-[220px] transform hover:scale-105">
+            <a 
+              href="https://cloutcareers.typeform.com/hiring" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group relative px-10 py-5 bg-accent text-accent-foreground font-medium rounded-md transition-all duration-300 hover:bg-accent/90 hover:shadow-xl hover:shadow-accent/25 min-w-[220px] transform hover:scale-105 inline-flex items-center justify-center"
+            >
               <span className="relative z-10 text-xl font-mono tracking-wide">Hire Talent</span>
               <div className="absolute inset-0 rounded-md bg-gradient-to-r from-accent to-accent opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-            </button>
+            </a>
             
-            <button className="group relative px-10 py-5 bg-secondary text-secondary-foreground font-medium rounded-md border border-border transition-all duration-300 hover:bg-secondary/80 hover:border-accent/50 hover:shadow-lg min-w-[220px] transform hover:scale-105">
+            <a 
+              href="https://cloutcareers.typeform.com/apply" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group relative px-10 py-5 bg-secondary text-secondary-foreground font-medium rounded-md border border-border transition-all duration-300 hover:bg-secondary/80 hover:border-accent/50 hover:shadow-lg min-w-[220px] transform hover:scale-105 inline-flex items-center justify-center"
+            >
               <span className="relative z-10 text-xl font-mono tracking-wide">Join Network</span>
               <div className="absolute inset-0 rounded-md bg-accent opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-            </button>
+            </a>
           </div>
           
           {/* Primary navigation - much more prominent */}
@@ -138,7 +148,7 @@ const Index = () => {
           
           {/* Optional subtitle for context */}
           <p className="mt-6 text-sm text-muted-foreground font-mono opacity-60 tracking-wider uppercase">
-            Incentivized talent networks for early-stage startups
+            Professional talent acquisition platform
           </p>
         </div>
       </div>
