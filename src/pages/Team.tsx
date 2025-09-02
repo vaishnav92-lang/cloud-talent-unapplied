@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Team = () => {
   return (
@@ -23,12 +24,12 @@ const Team = () => {
       {/* Navigation */}
       <nav className="relative z-20 flex items-center justify-between p-6">
         <Link to="/" className="text-2xl font-light tracking-tight text-foreground opacity-90 hover:opacity-100 transition-opacity">
-          clout
+          Clout
         </Link>
         <div className="flex space-x-6">
           <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm">Home</Link>
-          <Link to="/pricing" className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm">Pricing</Link>
-          <Link to="/testimonials" className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm">Testimonials</Link>
+          <Link to="/pricing" className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm">Our Model</Link>
+          <Link to="/blog" className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm">Blog</Link>
         </div>
       </nav>
 
@@ -36,17 +37,6 @@ const Team = () => {
       <div className="relative z-10 px-6 py-12">
         <div className="max-w-6xl mx-auto">
           
-          {/* Page header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-foreground mb-4">
-              Team
-            </h1>
-            <div className="w-16 h-px bg-accent opacity-60 mx-auto" />
-            <p className="mt-4 text-muted-foreground font-mono text-sm tracking-wider uppercase opacity-70">
-              Building the future of talent networks
-            </p>
-          </div>
-
           {/* Page header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-foreground mb-4">
