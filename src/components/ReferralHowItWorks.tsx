@@ -15,7 +15,7 @@ export default function ReferralHowItWorks() {
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 px-6">
         {[
           {
-            title: "Reputation of the Referrer",
+            title: "Referrer Reputation",
             body:
               "Weight increases with track record and proximity to the work. Signal from people who’ve actually collaborated.",
             icon: (
@@ -25,9 +25,9 @@ export default function ReferralHowItWorks() {
             ),
           },
           {
-            title: "Strength of the Endorsement",
+            title: "Endorsement Strength",
             body:
-              "Short, falsifiable notes: outcomes, artifacts, scope, speed. No generic praise, real evidence.",
+              "Falsifiable notes: outcomes, scope, speed, artifacts. No generic praise—real evidence.",
             icon: (
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                 <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h10M4 18h7" />
@@ -35,9 +35,9 @@ export default function ReferralHowItWorks() {
             ),
           },
           {
-            title: "Relevance to the Role",
+            title: "Role Relevance",
             body:
-              "Skills, stage, domain, and availability matched to your actual JD. The right fit, not just a keyword match.",
+              "Skills, stage, domain, and availability matched to your actual JD. The right fit—not a keyword match.",
             icon: (
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                 <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M12 3v18M3 12h18" />
@@ -53,18 +53,6 @@ export default function ReferralHowItWorks() {
             <p className="text-foreground/80 text-sm leading-relaxed">{c.body}</p>
           </div>
         ))}
-      </div>
-
-      {/* Mini referral score explainer */}
-      <div className="max-w-4xl mx-auto mt-10 px-6">
-        <div className="bg-card/30 border border-border/60 rounded-lg p-5">
-          <p className="text-sm text-foreground/80">
-            <span className="font-medium text-foreground">Referral Score</span> = 0.40 × <span className="text-foreground">Reputation</span> + 0.35 × <span className="text-foreground">Endorsement</span> + 0.25 × <span className="text-foreground">Relevance</span>
-            <span className="text-foreground/60"> (adjusted over time by your feedback and signal freshness)</span>.
-            <br />
-            Scores route intros to the right next step: <span className="text-foreground">screen</span>, <span className="text-foreground">take-home</span>, or <span className="text-foreground">hold</span>.
-          </p>
-        </div>
       </div>
     </section>
   );
