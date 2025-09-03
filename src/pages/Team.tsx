@@ -63,8 +63,7 @@ const Team = () => {
                 Founder and CEO
               </p>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Vaishnav founded Clout after receiving an Emergent Ventures grant from economist Tyler Cowen to explore talent markets. He spent his early career across investing roles at JP Morgan Asset Management and Forum Capital, and then as CFO of SolarHome, the first pay-as-you-go solar company in Southeast Asia. He holds an MBA from MIT Sloan and an undergraduate degree in Computer Science degree from Nanyang Technological University. He writes on Substack at www.optimaloutliers.com
-              </p>
+                Vaishnav founded Clout after receiving an Emergent Ventures grant from economist Tyler Cowen to explore talent markets. He spent his early career across investing roles at JP Morgan Asset Management and Forum Capital, and then as CFO of SolarHome, the first pay-as-you-go solar company in Southeast Asia. He holds an MBA from MIT Sloan and an undergraduate degree in Computer Science degree from Nanyang Technological University. 
             </div>
 
             {/* Jordan Rubin - Advisor */}
