@@ -1,4 +1,3 @@
-// components/ReferralHowItWorks.tsx
 import React from "react";
 
 export default function ReferralHowItWorks() {
@@ -7,9 +6,9 @@ export default function ReferralHowItWorks() {
       <div className="text-center max-w-3xl mx-auto px-6">
         <h2 className="text-2xl sm:text-3xl font-semibold text-foreground">How Clout Referrals Work</h2>
         <p className="mt-3 text-foreground/80 leading-relaxed">
-          We prioritize introductions by <span className="text-foreground">reputation of the referrer</span>,
-          <span className="text-foreground"> strength of the endorsement</span>, and
-          <span className="text-foreground"> relevance to the role</span>—then improve routing with your feedback.
+          We prioritize introductions by <span className="text-foreground">reputation of the referrer</span>,{" "}
+          <span className="text-foreground">strength of the endorsement</span>, and{" "}
+          <span className="text-foreground">relevance to the role</span>—then improve routing with your feedback.
         </p>
       </div>
 
