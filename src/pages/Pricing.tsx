@@ -1,10 +1,35 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+const CloutLogo = () => (
+  <svg width="120" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" aria-label="Clout">
+    <defs>
+      <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="hsl(142, 76%, 36%)" stopOpacity="1" />
+        <stop offset="100%" stopColor="hsl(142, 70%, 45%)" stopOpacity="0.8" />
+      </linearGradient>
+    </defs>
+    <g transform="translate(8, 12)">
+      <circle cx="8" cy="8" r="2" fill="url(#logoGradient)" />
+      <circle cx="3" cy="3" r="1" fill="hsl(142, 76%, 36%)" opacity="0.8" />
+      <circle cx="13" cy="4" r="1" fill="hsl(142, 76%, 36%)" opacity="0.6" />
+      <circle cx="4" cy="13" r="1" fill="hsl(142, 76%, 36%)" opacity="0.7" />
+      <circle cx="13" cy="13" r="1" fill="hsl(142, 76%, 36%)" opacity="0.5" />
+      <line x1="8" y1="8" x2="3" y2="3" stroke="hsl(142, 76%, 36%)" strokeWidth="0.5" opacity="0.4" />
+      <line x1="8" y1="8" x2="13" y2="4" stroke="hsl(142, 76%, 36%)" strokeWidth="0.5" opacity="0.3" />
+      <line x1="8" y1="8" x2="4" y2="13" stroke="hsl(142, 76%, 36%)" strokeWidth="0.5" opacity="0.4" />
+      <line x1="8" y1="8" x2="13" y2="13" stroke="hsl(142, 76%, 36%)" strokeWidth="0.5" opacity="0.2" />
+    </g>
+    <text x="35" y="25" fontFamily="'Inter', system-ui, sans-serif" fontSize="16" fontWeight="300" fill="hsl(210, 20%, 98%)" letterSpacing="-0.02em">
+      Clout
+    </text>
+  </svg>
+);
+
 const Pricing = () => {
   return (
     <main className="min-h-screen bg-background relative overflow-hidden">
-      {/* Background elements */}
+      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-card opacity-90" />
       <div className="absolute inset-0 opacity-5">
         <div
@@ -14,144 +39,146 @@ const Pricing = () => {
               linear-gradient(hsl(220 15% 15% / 0.3) 1px, transparent 1px),
               linear-gradient(90deg, hsl(220 15% 15% / 0.3) 1px, transparent 1px)
             `,
-            backgroundSize: '40px 40px'
+            backgroundSize: '40px 40px',
           }}
         />
       </div>
 
-      {/* Navigation */}
+      {/* Nav */}
       <nav className="relative z-20 flex items-center justify-between p-6">
-        <Link
-          to="/"
-          className="text-2xl font-light tracking-tight text-foreground opacity-90 hover:opacity-100 transition-opacity"
-        >
-          clout
+        <Link to="/" className="inline-flex items-center gap-2 text-foreground hover:opacity-90">
+          <CloutLogo />
         </Link>
-        <div className="flex space-x-6">
-          <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm">Home</Link>
-          <Link to="/team" className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm">Team</Link>
-          <Link to="/blog" className="text-muted-foreground hover:text-foreground transition-colors font-mono text-sm">Blog</Link>
+        <div className="flex items-center space-x-1 sm:space-x-2">
+          <Link to="/" className="font-sans text-foreground/80 hover:text-foreground text-sm px-3 py-2 rounded-md">Home</Link>
+          <Link to="/team" className="font-sans text-foreground/80 hover:text-foreground text-sm px-3 py-2 rounded-md">Team</Link>
+          <Link to="/pricing" className="font-sans text-foreground text-sm px-3 py-2 rounded-md bg-foreground/5">Our Model</Link>
+          <Link to="/blog" className="font-sans text-foreground/80 hover:text-foreground text-sm px-3 py-2 rounded-md">Blog</Link>
         </div>
       </nav>
 
-      {/* Main content */}
-      <div className="relative z-10 px-6 py-12">
-        <div className="max-w-6xl mx-auto">
-
+      {/* Content */}
+      <section className="relative z-10 px-6 pt-10 pb-20">
+        <div className="max-w-6xl mx-auto text-center">
           {/* Hero */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-foreground mb-4">
-              Hiring is Broken for Startups
-            </h1>
-            <div className="w-16 h-px bg-accent opacity-60 mx-auto" />
-            <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Most funnels filter for legibility, not ability. Recruiters recycle the same pools and overcharge.
-              Startups end up paying $30–50k for noise.
-            </p>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight text-foreground">
+            Hire for Ability, Not Keywords
+          </h1>
+
+          <div className="flex items-center justify-center my-6">
+            <div className="w-16 h-px bg-accent opacity-60" />
+            <div className="w-2 h-2 bg-accent rounded-full mx-4 opacity-60" />
+            <div className="w-16 h-px bg-accent opacity-60" />
           </div>
 
-          {/* Proof band */}
-          <section
-            aria-label="How Clout helps"
-            className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto mb-10"
-          >
-            <div className="bg-card border border-border rounded-lg p-6">
-              <h3 className="text-sm font-mono tracking-wider uppercase text-muted-foreground mb-2">Context, not keywords</h3>
-              <p className="text-foreground/90">
-                Every candidate comes with <span className="font-medium">real context</span>—an endorsement or qualified notes
-                from someone who’s worked with them.
-              </p>
-            </div>
-            <div className="bg-card border border-border rounded-lg p-6">
-              <h3 className="text-sm font-mono tracking-wider uppercase text-muted-foreground mb-2">Stronger top-of-funnel</h3>
-              <p className="text-foreground/90">
-                We enhance your top-of-funnel with <span className="font-medium">vetted introductions</span> and save you time on
-                first screens, scheduling, rough checks, and take-home reviews—so you meet fewer people, but better ones.
-              </p>
-            </div>
-            <div className="bg-card border border-border rounded-lg p-6">
-              <h3 className="text-sm font-mono tracking-wider uppercase text-muted-foreground mb-2">Proven results</h3>
-              <p className="text-foreground/90">
-                Over <span className="font-semibold">40%</span> of candidates we submit advance to final rounds.
-              </p>
-            </div>
-          </section>
+          <p className="max-w-prose mx-auto text-foreground/90 leading-relaxed">
+            Most funnels optimize for legibility, not ability. Recruiters reuse the same pools and charge for noise.
+            We route vetted introductions with real context, so your interviews start stronger.
+          </p>
 
-          {/* Hidden costs callout */}
-          <div className="max-w-4xl mx-auto mb-12">
-            <div className="bg-muted/30 border border-border rounded-lg p-5">
-              <p className="text-sm text-muted-foreground">
-                Half of recruiting costs are <span className="font-medium text-foreground">unseen</span>—time spent coordinating, screening,
-                interviewing, and validating. Clout reduces that drag by delivering <span className="font-medium text-foreground">fewer, more qualified</span> candidates with context.
+          {/* Proof cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+            <div className="bg-card/40 border border-border/60 rounded-lg p-6 text-left">
+              <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-4 h-4" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M4 7h16M4 12h10M4 17h7" />
+                </svg>
+              </div>
+              <h3 className="font-sans text-base md:text-lg text-foreground/90 mb-2">Context, Not Keywords</h3>
+              <p className="text-foreground/80 text-sm leading-relaxed">
+                Every candidate arrives with real context—an endorsement or qualified notes from someone who’s worked with them.
+              </p>
+            </div>
+
+            <div className="bg-card/40 border border-border/60 rounded-lg p-6 text-left">
+              <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-4 h-4" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M3 12h18M12 3v18" />
+                </svg>
+              </div>
+              <h3 className="font-sans text-base md:text-lg text-foreground/90 mb-2">Stronger Top-of-Funnel</h3>
+              <p className="text-foreground/80 text-sm leading-relaxed">
+                We handle vetting, scheduling, rough checks, and take-homes, so you meet fewer people—but better ones.
+              </p>
+            </div>
+
+            <div className="bg-card/40 border border-border/60 rounded-lg p-6 text-left">
+              <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-4 h-4" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M4 4v6h6M20 20v-6h-6M5.5 18.5A8 8 0 1020 10M4 14a8 8 0 0014.5 4.5" />
+                </svg>
+              </div>
+              <h3 className="font-sans text-base md:text-lg text-foreground/90 mb-2">Feedback-Driven Referrals</h3>
+              <p className="text-foreground/80 text-sm leading-relaxed">
+                Hiring manager feedback closes the loop, improving future introductions over time.
               </p>
             </div>
           </div>
 
-          {/* Pricing – single card */}
-          <div className="max-w-3xl mx-auto">
-            <section className="bg-card border border-border rounded-lg p-8 hover:border-accent/30 transition-colors">
-              <div className="text-center mb-6">
-                <h2 className="text-2xl font-medium text-foreground mb-2">
-                  Pricing
-                </h2>
-                <div className="w-8 h-px bg-accent opacity-60 mx-auto" />
-              </div>
+          {/* Divider */}
+          <div className="my-12">
+            <div className="w-full h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
+          </div>
 
-              <div className="space-y-4 mb-8" role="table" aria-label="Pricing details">
-                <div className="flex items-center justify-between py-2 border-b border-border/50" role="row">
-                  <span className="text-muted-foreground font-mono text-sm" role="cell">Success Fee</span>
-                  <span className="text-foreground font-medium" role="cell">
-                    15% of first-year base salary (flat)
-                  </span>
-                </div>
-                <div className="flex items-center justify-between py-2 border-b border-border/50" role="row">
-                  <span className="text-muted-foreground font-mono text-sm" role="cell">Upfront Cost</span>
-                  <span className="text-foreground font-medium" role="cell">$0</span>
-                </div>
-                <div className="flex items-center justify-between py-2 border-b border-border/50" role="row">
-                  <span className="text-muted-foreground font-mono text-sm" role="cell">Guarantee Period</span>
-                  <span className="text-foreground font-medium" role="cell">90 days</span>
-                </div>
-                <div className="flex items-center justify-between py-2" role="row">
-                  <span className="text-muted-foreground font-mono text-sm" role="cell">Payment Terms</span>
-                  <span className="text-foreground font-medium" role="cell">Net 30</span>
-                </div>
-              </div>
+          {/* Pricing panel */}
+          <div className="max-w-3xl mx-auto bg-card/30 border border-accent/40 rounded-xl p-6 sm:p-8 text-left shadow-sm">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-semibold text-foreground">Pricing</h2>
+              <div className="w-12 h-[2px] bg-accent/80 mx-auto mt-2 rounded" />
+            </div>
 
-              <div className="space-y-3 text-sm text-muted-foreground">
-                <p>• Pay only when you hire</p>
-                <p>• Candidates come with firsthand endorsements and qualified notes</p>
-                <p>• Over 40% advance to final rounds</p>
-                <p>• 90-day replacement guarantee</p>
-                <p>• Direct candidate contact</p>
+            {/* Semantic definition list */}
+            <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-5">
+              <div>
+                <dt className="text-foreground/70">Success Fee</dt>
+                <dd className="text-foreground/90 font-medium">15% of first-year base salary</dd>
               </div>
+              <div>
+                <dt className="text-foreground/70">Upfront Cost</dt>
+                <dd className="text-foreground/90 font-medium">$0</dd>
+              </div>
+              <div>
+                <dt className="text-foreground/70">Replacement Window</dt>
+                <dd className="text-foreground/90 font-medium">90 days</dd>
+              </div>
+              <div>
+                <dt className="text-foreground/70">Payment Terms</dt>
+                <dd className="text-foreground/90 font-medium">Net 30</dd>
+              </div>
+            </dl>
 
+            {/* Benefits list */}
+            <ul className="mt-6 space-y-2 text-foreground/80 text-sm">
+              <li>• Pay only when you hire</li>
+              <li>• Firsthand endorsements and qualified notes</li>
+              <li>• ~40% of candidates advance to final rounds <span className="text-foreground/60">(varies by role and cohort)</span></li>
+              <li>• 90-day replacement window</li>
+              <li>• Direct candidate contact</li>
+            </ul>
+
+            {/* CTA */}
+            <div className="mt-8">
               <a
                 href="https://cloutcareers.typeform.com/hiring"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 w-full inline-flex items-center justify-center px-6 py-3 bg-accent text-accent-foreground font-medium rounded-md transition-all duration-300 hover:bg-accent/90 hover:shadow-lg"
+                className="group block w-full text-center px-6 py-4 bg-accent text-accent-foreground rounded-lg font-medium hover:bg-accent/90 hover:shadow-2xl hover:shadow-accent/30 transition-all"
               >
-                <span className="font-mono tracking-wide">Start Hiring</span>
+                Start Hiring
               </a>
-            </section>
+              <p className="mt-2 text-center text-foreground/70 text-sm">
+                No upfront cost • 2–3 minutes to get started
+              </p>
+            </div>
           </div>
-
-          {/* Price clarity footer line */}
-          <div className="mt-16 text-center">
-            <p className="text-muted-foreground font-mono text-sm opacity-70">
-              Simple terms: <span className="text-foreground">15% success fee on base salary</span>. No retainers. No hidden fees.
-            </p>
-          </div>
-
         </div>
-      </div>
+      </section>
 
-      {/* Corner accents */}
-      <div className="absolute top-8 left-8 w-8 h-8 border-l border-t border-accent opacity-30" />
-      <div className="absolute top-8 right-8 w-8 h-8 border-r border-t border-accent opacity-30" />
-      <div className="absolute bottom-8 left-8 w-8 h-8 border-l border-b border-accent opacity-30" />
-      <div className="absolute bottom-8 right-8 w-8 h-8 border-r border-b border-accent opacity-30" />
+      {/* Corners */}
+      <div className="absolute top-8 left-8 w-12 h-12 border-l-2 border-t-2 border-accent opacity-30" />
+      <div className="absolute top-8 right-8 w-12 h-12 border-r-2 border-t-2 border-accent opacity-30" />
+      <div className="absolute bottom-8 left-8 w-12 h-12 border-l-2 border-b-2 border-accent opacity-30" />
+      <div className="absolute bottom-8 right-8 w-12 h-12 border-r-2 border-b-2 border-accent opacity-30" />
     </main>
   );
 };
