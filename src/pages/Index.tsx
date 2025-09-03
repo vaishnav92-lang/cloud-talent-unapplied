@@ -49,38 +49,66 @@ const Index: React.FC = () => {
       <nav className="relative z-20 flex items-center justify-between p-6">
         <CloutLogo />
         <div className="flex items-center space-x-1 sm:space-x-2">
-          <Link to="/team" className="font-sans text-foreground/80 hover:text-foreground transition-colors text-sm px-3 py-2 rounded-md">Team</Link>
-          <Link to="/pricing" className="font-sans text-foreground/80 hover:text-foreground transition-colors text-sm px-3 py-2 rounded-md">Our Model</Link>
-          <Link to="/blog" className="font-sans text-foreground/80 hover:text-foreground transition-colors text-sm px-3 py-2 rounded-md">Blog</Link>
+          <Link to="/team" className="font-sans text-foreground/80 hover:text-foreground transition-colors text-sm px-3 py-2 rounded-md">
+            Team
+          </Link>
+          <Link to="/pricing" className="font-sans text-foreground/80 hover:text-foreground transition-colors text-sm px-3 py-2 rounded-md">
+            Our Model
+          </Link>
+          <Link to="/blog" className="font-sans text-foreground/80 hover:text-foreground transition-colors text-sm px-3 py-2 rounded-md">
+            Blog
+          </Link>
+
+          {/* NEW: Nav CTA */}
+          <a
+            href="https://cloutcareers.typeform.com/hiring"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline-flex items-center px-3 py-2 border border-accent text-accent rounded-md hover:bg-accent hover:text-accent-foreground transition-colors"
+          >
+            Start Hiring
+          </a>
         </div>
       </nav>
 
       {/* Hero */}
-      <div className="relative z-10 flex items-center justify-center min-h-[80vh] px-6">
+      <div className="relative z-10 flex items-center justify-center min-h-[78vh] px-6">
         <div className="text-center max-w-6xl mx-auto">
-          <div className="mb-10">
-            <h1 className="font-sans font-light tracking-tight text-foreground leading-tight mb-6">
+          <div className="mb-8">
+            <h1 className="font-sans font-light tracking-tight text-foreground leading-tight mb-4">
               <span className="block opacity-95 text-6xl sm:text-7xl md:text-8xl lg:text-9xl">Clout</span>
             </h1>
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-20 h-px bg-accent opacity-60" />
-              <div className="w-2 h-2 bg-accent rounded-full mx-4 opacity-60 animate-pulse" />
-              <div className="w-20 h-px bg-accent opacity-60" />
-            </div>
+
+            {/* Simplified divider (remove the center dot) */}
+            <div className="w-24 h-px bg-accent/50 mx-auto mb-6" />
 
             <p className="font-sans text-foreground/90 text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight text-balance max-w-[28ch] mx-auto">
               Access talent that won't apply
             </p>
-            <p className="mt-4 text-foreground/80 leading-relaxed max-w-prose mx-auto">
-              The best information about great employees lives inside professional networks—not résumés.
-              Clout unlocks that signal through accountable referrals and a feedback loop with hiring managers.
+
+            {/* NEW copy + left alignment for better rag */}
+            <p className="mt-4 text-foreground/85 leading-relaxed max-w-prose mx-auto text-left md:text-left">
+              Strong hiring signal lives inside professional networks—not résumés. Clout turns those signals into
+              accountable referrals and improves them with your feedback.
             </p>
           </div>
 
-          {/* How Referrals Work (component call) */}
+          {/* How Referrals Work */}
           <ReferralHowItWorks />
 
-          {/* Existing value props */}
+          {/* Small CTA right under How It Works */}
+          <div className="mt-6">
+            <a
+              href="https://cloutcareers.typeform.com/hiring"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 rounded-md border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-colors"
+            >
+              Start Hiring
+            </a>
+          </div>
+
+          {/* Value props */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 mb-16 max-w-4xl mx-auto">
             <div className="bg-card/30 border border-border/50 rounded-lg p-6 backdrop-blur-sm">
               <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center mb-4 mx-auto">
@@ -118,7 +146,7 @@ const Index: React.FC = () => {
             <div className="w-full h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
           </div>
 
-          {/* CTAs */}
+          {/* Bottom CTAs */}
           <div className="flex flex-col sm:flex-row gap-6 items-center justify-center mb-8">
             <a
               href="https://cloutcareers.typeform.com/hiring"
