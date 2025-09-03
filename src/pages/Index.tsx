@@ -56,10 +56,10 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero section */}
+      {/* Hero */}
       <div className="relative z-10 flex items-center justify-center min-h-[80vh] px-6">
         <div className="text-center max-w-6xl mx-auto">
-          <div className="mb-16">
+          <div className="mb-10">
             <h1 className="font-sans font-light tracking-tight text-foreground leading-tight mb-6">
               <span className="block opacity-95 text-6xl sm:text-7xl md:text-8xl lg:text-9xl">Clout</span>
             </h1>
@@ -71,41 +71,59 @@ const Index = () => {
             <p className="text-muted-foreground font-mono text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-wide leading-relaxed">
               Access talent that won't apply
             </p>
+
+            {/* Concept sentence: network signal + feedback loop */}
+            <p className="mt-4 text-muted-foreground/80 max-w-3xl mx-auto">
+              The best information about great employees lives inside professional networks—not résumés.
+              Clout unlocks that signal through accountable referrals and a feedback loop with hiring managers.
+            </p>
           </div>
 
           {/* Value props */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 max-w-4xl mx-auto">
+            {/* Prop 1 */}
             <div className="bg-card/30 border border-border/50 rounded-lg p-6 backdrop-blur-sm">
               <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z"/>
                 </svg>
               </div>
               <h3 className="font-mono text-sm tracking-wider uppercase text-accent mb-2">No Upfront Cost</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">Pay only when you hire, with performance-based fees</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Pay only when you hire; our fees are tied to outcomes.
+              </p>
             </div>
 
+            {/* Prop 2 */}
             <div className="bg-card/30 border border-border/50 rounded-lg p-6 backdrop-blur-sm">
               <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
                 </svg>
               </div>
               <h3 className="font-mono text-sm tracking-wider uppercase text-accent mb-2">Verified Networks</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">Access talent through trusted professional referrals</p>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Candidates come through people who have worked with them, not cold applications.
+              </p>
             </div>
 
+            {/* Prop 3 (replaced "Quality Guaranteed") */}
             <div className="bg-card/30 border border-border/50 rounded-lg p-6 backdrop-blur-sm">
               <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                {/* loop/refresh icon */}
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                        d="M4 4v6h6M20 20v-6h-6M5.5 18.5A8 8 0 1020 10M4 14a8 8 0 0014.5 4.5"/>
                 </svg>
               </div>
-              <h3 className="font-mono text-sm tracking-wider uppercase text-accent mb-2">Quality Guaranteed</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">Karma-based system ensures high-quality introductions</p>
+              <h3 className="font-mono text-sm tracking-wider uppercase text-accent mb-2">Feedback-Driven Referrals</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Hiring manager feedback closes the loop, so future introductions get better over time.
+              </p>
             </div>
           </div>
 
+          {/* Separator */}
           <div className="mb-12">
             <div className="w-full h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
           </div>
