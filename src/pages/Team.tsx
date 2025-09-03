@@ -57,11 +57,14 @@ export default function Team() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             {/* Vaishnav */}
             <article className="bg-card border border-border rounded-lg p-8 text-center hover:border-accent/30 transition-colors">
-              <div className="w-32 h-32 bg-gradient-to-br from-accent/20 to-accent/10 rounded-lg border border-accent/30 flex items-center justify-center mx-auto mb-6">
+              <div className="w-32 h-32 rounded-lg overflow-hidden border border-accent/30 bg-accent/10 mx-auto mb-6">
                 <img
                   src="/VHeadshot.png"
-                  alt="Jordan Rubin headshot"
+                  alt="Vaishnav Sunil headshot"
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
               <h3 className="text-2xl font-medium text-foreground mb-2">Vaishnav Sunil</h3>
               <p className="text-accent font-mono text-sm mb-4 tracking-wide">Founder and CEO</p>
@@ -74,11 +77,12 @@ export default function Team() {
             {/* Jordan Rubin — Advisor */}
             <article className="bg-card border border-border rounded-lg p-8 text-center hover:border-accent/30 transition-colors">
               <div className="w-32 h-32 rounded-lg overflow-hidden mx-auto mb-6 bg-accent/10 border border-accent/30">
-                {/* If your file is /public/JR Headshot.jpg, the URL is encoded below. Prefer renaming to JR-Headshot.jpg and updating src="/JR-Headshot.jpg". */}
                 <img
-                  src="/JR%20Headshot.jpg"
+                  src="/JR-Headshot.jpg"
                   alt="Jordan Rubin headshot"
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <h3 className="text-2xl font-medium text-foreground mb-2">Jordan Rubin</h3>
