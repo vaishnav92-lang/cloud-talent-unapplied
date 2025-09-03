@@ -1,4 +1,6 @@
+import ReferralHowItWorks from "./components/ReferralHowItWorks";
 import React from 'react';
+
 import { Link } from 'react-router-dom';
 
 const CloutLogo = () => (
