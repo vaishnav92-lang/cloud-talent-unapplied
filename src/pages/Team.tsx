@@ -69,8 +69,7 @@ export default function Team() {
               <h3 className="text-2xl font-medium text-foreground mb-2">Vaishnav Sunil</h3>
               <p className="text-accent font-mono text-sm mb-4 tracking-wide">Founder and CEO</p>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Building Clout to unlock high-signal referrals with accountability and feedback loops—so teams
-                meet fewer people, but better ones.
+                Vaishnav founded Clout after writing about talent markets and incentive design through his Substack newsletter Optima & Outliers, which led to his first client and an Emergent Ventures grant from economist Tyler Cowen. Previously, he worked at JP Morgan Asset Management and as CFO of SolarHome, a pay-as-you-go solar company in Southeast Asia. He hold an undergraduate degree in Computer Science from Nanyang Technological University and an MBA from MIT Sloan.
               </p>
             </article>
 
@@ -78,8 +77,7 @@ export default function Team() {
             <article className="bg-card border border-border rounded-lg p-8 text-center hover:border-accent/30 transition-colors">
               <div className="w-32 h-32 rounded-lg overflow-hidden mx-auto mb-6 bg-accent/10 border border-accent/30">
                 <img
-                  src="/JR-Headshot.jpg"
-                  alt="Jordan Rubin headshot"
+                  src="/JR Headshot.jpg"
                   className="w-full h-full object-cover"
                   loading="lazy"
                   decoding="async"
@@ -88,8 +86,7 @@ export default function Team() {
               <h3 className="text-2xl font-medium text-foreground mb-2">Jordan Rubin</h3>
               <p className="text-accent font-mono text-sm mb-4 tracking-wide">Advisor</p>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Advises on product, go-to-market, and incentives. Helps make sure strong signals translate into
-                practical hiring outcomes.
+                Jordan is on garden leave after building the systematic buy-side alpha capture business at Two Sigma Investments. He currently blogs at FUTURE TOKENS on Substack. Jordan received a BS/BA degree in Economics from Wharton School at University of Pennsylvania. As advisor to Metaculus, he focuses on commercialization and monetization.
               </p>
             </article>
           </div>
