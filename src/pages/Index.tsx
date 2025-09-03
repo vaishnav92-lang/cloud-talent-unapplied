@@ -67,8 +67,7 @@ const Index: React.FC = () => {
           </h2>
 
           <p className="mt-4 text-left text-foreground/85 leading-relaxed max-w-xl">
-            Strong hiring signal lives inside professional networks—not résumés. Clout turns those signals into
-            accountable referrals and improves them with your feedback.
+            Strong hiring signals live inside professional networks. Clout identifies and compensates good judgment, while improving match quality for employers.
           </p>
 
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
