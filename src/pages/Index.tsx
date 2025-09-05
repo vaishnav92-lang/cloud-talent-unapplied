@@ -45,7 +45,7 @@ const Index: React.FC = () => {
           </Link>
           {/* Nav CTA */}
           <a
-            href="https://cloutcareers.typeform.com/hiring"
+            href="https://calendly.com/vaishnav-cloutcareers/30min"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center px-3 py-2 border border-accent text-accent rounded-md hover:bg-accent hover:text-accent-foreground transition-colors"
@@ -72,7 +72,7 @@ const Index: React.FC = () => {
 
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
             <a
-              href="https://cloutcareers.typeform.com/hiring"
+              href="https://calendly.com/vaishnav-cloutcareers/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex justify-center items-center px-6 py-3 rounded-md bg-accent text-accent-foreground hover:bg-accent/90 transition-colors"
