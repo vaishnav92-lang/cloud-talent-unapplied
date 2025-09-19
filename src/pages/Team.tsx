@@ -59,7 +59,7 @@ export default function Team() {
             <article className="bg-card border border-border rounded-lg p-8 text-center hover:border-accent/30 transition-colors">
               <div className="w-32 h-32 rounded-lg overflow-hidden border border-accent/30 bg-accent/10 mx-auto mb-6">
                 <img
-                  src="/photo cropped.jpg"
+                  src="/IMG_5763.jpg"
                   alt="Vaishnav Sunil headshot"
                   className="w-full h-full object-cover"
                   loading="lazy"
